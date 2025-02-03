@@ -12,6 +12,10 @@ import Layout from './Components/Layouts/Layout';
 import SignIn from './Components/Authentication/Card/SignIn';
 import SignUp from './Components/Authentication/Card/SignUp';
 
+import SignIn1 from './Components/Authentication/Simple/SignIn1';
+import SignUp2 from './Components/Authentication/Simple/SignUp2';
+import Forget from './Components/Authentication/Simple/Forget';
+
 
 function App() {
   
@@ -25,23 +29,15 @@ function App() {
      */}
     
 
-{/* <SignIn/> */}
-        
-<div className='flex w-full h-screen'>
-    <div className='w-full flex items-centre justify-center lg:w-1/2 '>
-<SignUp/>
-</div>
+{/* <SignIn/>
+         */}
 
-<div className='hidden lg:flex h-full justify-center items-center w-1/2 bg-gray-700'>
- <div className='w-60 h-60 bg-gradient-to-tr from-violet-500 rounded-full'>
-  
+{/* <SignIn1/> */}
 
-</div>
-</div>
-</div>
+{/* <SignUp2/> */}
 
 
-
+<Forget/>
 
 
      
