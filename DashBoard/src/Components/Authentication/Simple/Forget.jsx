@@ -3,24 +3,21 @@ import logo from './logo.png';
 
 function Forget() {
   return (
-    <div>
-    {/* <div>  <img src= {logo}  className='w-15 ms-30'/><div> */}
-     <div className=' h-screen flex items-center justify-center'>
-     <div className=' text-2xl font-bold'>
-        Forgot your password?</div>
-  <br />
-        <div>
-        Enter your email below and we will send
-        you a reset link
-
-        <input type="text" placeholder='Email ' className='h-10' />
-        </div>
-     </div>
-     <div>
-   
-     </div>
-     </div>
-
+    <div className='bg-gray-950 text-white'>
+      <div className='flex   items-center  justify-center h-screen '>
+      <div className='text-2xl'> Forgot your password?
+      <p className='text-xl'>Enter your email below and we will send
+      you a reset link</p>
+      <input type="text"  placeholder='Email '  className=' cursor-pointer h-10 px-20 bg-gray-700 rounded text-black ' />
+      <button className=' m-3 bg-sky-700 rounded w-20 h-10'>Send</button>
+      <p className='text-xl ms-40'>Still having problems?</p>
+      </div>
+     
+      </div>
+      </div>
+    
+     
+    
 
   )
 }
