@@ -19,7 +19,7 @@ function App() {
   <>
 
 
-{/* <BrowserRouter>
+<BrowserRouter>
         <Routes>
        
           <Route path="/" element={<Header />}>
@@ -34,7 +34,7 @@ function App() {
           <Route path="forget" element={<Forget />} />
           <Route path="resetpassword" element={<ResetPassword />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
 
 
@@ -48,23 +48,23 @@ function App() {
 
 
 
-
+{/* 
 <BrowserRouter>
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route path ="sidebar" element={<Sidebar/>} />
-          <Route path="signin" element={<SignIn1 />} />
-          <Route path="main " element={<Main />} />
-          <Route path="layout " element={<Layout/>} />
-          <Route path="signUp2" element={<SignUp2 />} />
-          <Route path="forget" element={<Forget/>} />
-          <Route path="resetpassword" element={<ResetPassword/>}/>
-          <Route path="footer" element={<Footer/>}/>
+          <Route path ="/sidebar" element={<Sidebar/>} />
+          <Route path="/signin" element={<SignIn1 />} />
+          <Route path="/main " element={<Main />} />
+          <Route path="/layout " element={<Layout/>} />
+          <Route path="/signUp2" element={<SignUp2 />} />
+          <Route path="/forget" element={<Forget/>} />
+          <Route path="/resetpassword" element={<ResetPassword/>}/>
+          <Route path="/footer" element={<Footer/>}/>
           
           
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
 
 

@@ -3,8 +3,9 @@ import logo from "./logo.png";
 
 function SignIn1() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-slate-700">
-      <div className=" mt-4 flex   items-center justify-center  h-full">
+
+    <div className="bg-gray-800  h-screen">
+      <div className=" mt-4 flex   items-center justify-center ">
         {/* <div className=' w-12'>
             <img src={logo} /></div> */}
         <div className=" ">
@@ -57,7 +58,7 @@ function SignIn1() {
               />
             </div>
             <div className="justify-between flex mt-3">
-              <input type="checkbox" />
+              <input type="checkbox" className="mt-3" />
               <p className="me-45 mt-3 text-sky-500">Remember me</p>{" "}
               <span className="text-sky-500 mt-3">forgot Password</span>
             </div>
@@ -70,7 +71,10 @@ function SignIn1() {
       <div className="text-sky-600 ms-150 mt-3 cursor-pointer ">
         Create an Account
       </div>
+   
     </div>
+
+  
   )
 }
 
