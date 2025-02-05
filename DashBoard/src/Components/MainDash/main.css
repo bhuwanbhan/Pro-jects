@@ -1,5 +1,7 @@
-.text {
-
+.last{
     font-size: 15px;
-
+}
+.last2{
+    font-size: 10px;
+    font-weight: 600;
 }

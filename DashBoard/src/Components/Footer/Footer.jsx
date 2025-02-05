@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
 
-    <div className=  'bg-slate-400 h-20'>
+    <div className=  'bg-slate-500 h-20'>
      
 
     
@@ -11,7 +11,7 @@ function Footer() {
         
    <p> Thank you for creating with Phoeni</p>
    <p>|2024</p>
-   <p>©Themewagon</p>
+   <p>© Themewagon</p>
 
 
     </div>
