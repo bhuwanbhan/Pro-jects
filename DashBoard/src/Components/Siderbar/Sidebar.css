@@ -2,7 +2,7 @@ ul{
     position: fixed;
     width:230px;
     height: 100%;
-    border: 0.1px solid;
+    border: 0.01px solid;
     background-color: white;
     top: 0;
     padding: 10px 15px;
