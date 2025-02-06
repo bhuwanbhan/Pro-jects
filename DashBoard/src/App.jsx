@@ -17,18 +17,19 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
   <>
-
+{/* 
        <Header />
-            <Sidebar />
+            <Sidebar /> */}
             {/* <Layout/> */}
          
-      
+{/*       
            <Main />
-          <SignIn1 />
+          
+          <SignIn1 /> */}
         <SignUp2 />
-         <Forget />
+         {/* <Forget />
          <ResetPassword />
-         <Footer />
+         <Footer /> */}
          
     </>  
      
