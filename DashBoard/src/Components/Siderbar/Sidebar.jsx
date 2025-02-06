@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Sidebar() {
   const parent=[
-    {title:"Home", path:"/home", icon: <FontAwesomeIcon icon={faPieChart}/>},
+    {title:"Home", path:"/", icon: <FontAwesomeIcon icon={faPieChart}/>},
     {title:"Ecommerce", path:"/ecommerce", icon: <FontAwesomeIcon icon={faCartShopping}/>},
     {title:"CRM", path:"/CRM", icon: <FontAwesomeIcon icon={faPhoneAlt}/>},
     {title:"Project Management", path:"/project-management", icon: <FontAwesomeIcon icon={faProjectDiagram}/>},
@@ -30,11 +30,12 @@ function Sidebar() {
     <>
     <ul>
     {parent.map((item,index)=>(
-        <Link key={index} to={item.path}>
+    <Link key={index} to={item.path}>
       <li>
-        <span id="icon">{item.icon}</span> <span id="title">{item.title}</span>
+        <span id="icon">{item.icon}</span> 
+        <span id="title">{item.title}</span>
       </li>
-        </Link>
+    </Link>
 ))}
 </ul>
     </>
