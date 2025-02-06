@@ -1,3 +1,30 @@
+ul{
+    position: fixed;
+    width:230px;
+    height: 100%;
+    border: 0.1px solid;
+    background-color: white;
+    top: 0;
+    padding: 10px 15px;
+    overflow-y: auto;
+}
+
 li{
+    padding:5px 10px;
     list-style: none;
+    font-size: 14px;
+    color: rgb(106, 106, 106);
+    margin-top:10px;
+    margin-bottom:20px;
+    transition: 0.4s ease-in-out;
+}
+
+li:hover {
+    background-color: rgb(220, 229, 236);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#icon {
+    margin-right: 10px;
 }
