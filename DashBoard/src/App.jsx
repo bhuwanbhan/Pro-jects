@@ -6,10 +6,10 @@ import Main from './Components/MainDash/Main'
 // import Header from './Components/Header/Header'
 import Sidebar from './Components/Siderbar/Sidebar';
 // import Layout from './Components/Layouts/Layout';
-import SignIn1 from './Components/Authentication/Simple/SignIn1';
-import SignUp2 from './Components/Authentication/Simple/SignUp2';
-import Forget from './Components/Authentication/Simple/Forget';
-import ResetPassword from './Components/Authentication/Simple/ResetPassword';
+import SignIn1 from './Components/Authentication/SignIn1';
+import SignUp2 from './Components/Authentication/SignUp2';
+import Forget from './Components/Authentication/Forget';
+import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
