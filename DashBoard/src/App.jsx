@@ -12,6 +12,8 @@ import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Api from './Components/Api/Api';
+import Fetch from './Components/Api/fetch';
 
 
  
@@ -25,6 +27,11 @@ function App() {
               <Route path='/sign-in' element={<SignIn1 />} />
               <Route path='/sign-up' element={<SignUp2 />} />
               <Route path='/forget' element={<Forget />} />
+              <Route path="/axios" element={ <Api/>}/> 
+
+              <Fetch/> 
+
+             
          </Routes>
          <Footer />
          </Router>
