@@ -29,7 +29,7 @@ function SignIn1() {
                 readOnly
                 placeholder="sign with the facebook  "
                 className="h-10 px-30  cursor-pointer
-                 bg-slate-300 rounded bg-amber-400"
+                 bg-slate-300 rounded "
               />
             </div>
 
@@ -44,7 +44,7 @@ function SignIn1() {
                 type="text"
                 placeholder="name @example.com"
                 className="h-10 px-30  read-only:
-                 bg-slate-300 rounded bg-amber-400"
+                 bg-slate-300 rounded "
               />
             </div>
             <div>
@@ -54,7 +54,7 @@ function SignIn1() {
                 type="text"
                 placeholder="Password"
                 className="h-10 px-30
-                 bg-slate-300 rounded bg-amber-400"
+                 bg-slate-300 rounded "
               />
             </div>
             <div className="justify-between flex mt-3">
@@ -73,9 +73,7 @@ function SignIn1() {
       </div>
    
     </div>
-
-  
-  )
+)
 }
 
 export default SignIn1;
