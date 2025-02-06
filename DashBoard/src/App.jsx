@@ -21,10 +21,10 @@ function App() {
   <Router>
             <Sidebar />
             <Routes>
-              <Route path='/home'element={<Main/>} />
-              <Route path='/sign-in'element={<SignIn1/>} />
-              <Route path='/sign-up'element={<SignUp2/>} />
-              <Route path='/forget'element={<Forget/>} />
+              <Route path='/home' element={<Main/>} />
+              <Route path='/sign-in' element={<SignIn1 />} />
+              <Route path='/sign-up' element={<SignUp2 />} />
+              <Route path='/forget' element={<Forget />} />
          </Routes>
          <Footer />
          </Router>
