@@ -1,4 +1,5 @@
 
+
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 
@@ -12,13 +13,17 @@ import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Api from './Components/Api/Api';
-import Fetch from './Components/Api/fetch';
+// import Api from './Components/Api/Api';
+// import Fetch from './Components/Api/fetch';
 
 
  
+
 function App() {
+  const isAuthenticated = !!localStorage.getItem("token"); // Example authentication check
+
   return (
+
   <>
   <Router>
             <Sidebar />
@@ -35,10 +40,12 @@ function App() {
          </Routes>
          <Footer />
          </Router>
-    </>  
      
-    
-  )
+ 
+
+  
+    </>
+  );
 }
 
-export default App
+export default App;
