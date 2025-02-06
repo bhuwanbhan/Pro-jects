@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Sidebar.css"
-import { faBarChart, faBarcode, faBookmark, faCalendarMinus, faCalendarTimes, faCartShopping, faFileImage, faFolder, faMailBulk, faMapLocation, faMessage, faNetworkWired, faPhoneAlt, faPieChart, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faBarChart, faBarcode, faBookmark, faCalendarMinus, faCalendarTimes, faCartShopping, faFileImage, faFolder, faKey, faLock, faLockOpen, faMailBulk, faMapLocation, faMessage, faNetworkWired, faPhoneAlt, faPieChart, faProjectDiagram, faUnlock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fontGrid } from '@mui/material/styles/cssUtils';
 function Sidebar() {
@@ -18,9 +18,9 @@ function Sidebar() {
     {title:"Galary", path:"/galary", icon: <FontAwesomeIcon icon={faFileImage}/>},
     {title:"File Manager", path:"/file-manager", icon: <FontAwesomeIcon icon={faFolder}/>},
     {title:"Calinder", path:"/Calinder", icon: <FontAwesomeIcon icon={faCalendarMinus}/>},
-    {title:"Sing-in", path:"/sing-in", icon: <FontAwesomeIcon icon={faPieChart}/>},
-    {title:"Sing-up", path:"/sing-up", icon: <FontAwesomeIcon icon={faPieChart}/>},
-    {title:"Forget", path:"/forget", icon: <FontAwesomeIcon icon={faPieChart}/>},
+    {title:"Sing-in", path:"/sing-in", icon: <FontAwesomeIcon icon={faUnlock}/>},
+    {title:"Sing-up", path:"/sing-up", icon: <FontAwesomeIcon icon={faLock}/>},
+    {title:"Forget", path:"/forget", icon: <FontAwesomeIcon icon={faKey}/>},
   ]
   return (
     <>
