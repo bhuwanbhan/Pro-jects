@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.png";
 
 function SignIn1() {
+  const [email, setEmail]=useState(" ");
+  const [ password, setPassword] = useState(" ");
+    const history = useHistory();
+
+
+    useEffect(()=>{
+      if(localStorage.getItem(`user-info`)){
+        history.push("/d")
+      }
+    },[])
+ 
   return (
 
     <div className="bg-gray-800  h-screen">
@@ -15,18 +26,18 @@ function SignIn1() {
           <div className="">
             <p className="ms-30 text-white ">Get access to your account</p>
             <div className="mt-10 text-slate-950  ">
-              <input
+              <button
                 type="text"
-                readOnly
+             
                 placeholder="sign with the google  "
-                className=" cursor-pointer h-10 px-30 bg-slate-300 rounded "
+                className=" cursor-pointer h-10 px-50 bg-slate-300 rounded "
               />
             </div>
 
             <div className="mt-3 text-slate-950  ">
               <input
                 type="text"
-                readOnly
+              readOnly
                 placeholder="sign with the facebook  "
                 className="h-10 px-30  cursor-pointer
                  bg-slate-300 rounded "
@@ -43,6 +54,7 @@ function SignIn1() {
               <input
                 type="text"
                 placeholder="name @example.com"
+                onChange={(e)=>setEmail(e.target.value)}
                 className="h-10 px-30  read-only:
                  bg-slate-300 rounded "
               />
@@ -53,6 +65,7 @@ function SignIn1() {
               <input
                 type="text"
                 placeholder="Password"
+                onChange={(e)=>setPassword(e.target.value)}
                 className="h-10 px-30
                  bg-slate-300 rounded "
               />
