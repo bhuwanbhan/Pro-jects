@@ -3,19 +3,26 @@ import React from 'react'
 function Footer() {
   return (
 
-    <div className=  'bg-slate-500 h-20'>
+    <>
+    <h1 className='border-t-1'></h1>
+
+    <div className=  'bg-slate-100 h-20'>
      
 
     
-    <div className='ms-70  flex gap-2'>
+    <div className='ms-70  flex gap-2 '>
         
-   <p> Thank you for creating with Phoeni</p>
-   <p>|2024</p>
-   <p>© Themewagon</p>
+   <p className=''> Thank you for creating with Phoeni</p>
+   <p className=''>|2024</p>
+   <p className=''>© Themewagon</p>
+
+
 
 
     </div>
     </div>
+
+    </>
   )
 }
 
