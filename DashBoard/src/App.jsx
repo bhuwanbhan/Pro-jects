@@ -24,26 +24,25 @@ function App() {
 
   return (
 
-  <>
-  <Router>
-            <Sidebar />
-            <Routes>
-              <Route path='/home' element={<Main/>} />
-              <Route path='/sign-in' element={<SignIn1 />} />
-              <Route path='/sign-up' element={<SignUp2 />} />
-              <Route path='/forget' element={<Forget />} />
-              <Route path="/axios" element={ <Api/>}/> 
-
-              <Fetch/> 
-
-             
-         </Routes>
-         <Footer />
-         </Router>
-     
- 
+    <>
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route path="/sign-in" element={<SignIn1 />} />
+          <Route path="/sign-up" element={<SignUp2 />} />
+          <Route path="/forget" element={<Forget />} />
+            .
+          {/* Protected Routes */}
+          <Route element={<Auth isAuthenticated={isAuthenticated} />}>
+            <Route path="/" element={<Main />} />
+            <Route path="/crm" element={<ResetPassword />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </Router>
 
   
+
     </>
   );
 }
