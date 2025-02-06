@@ -3,7 +3,7 @@
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import Main from './Components/MainDash/Main'
-import Header from './Components/Header/Header'
+// import Header from './Components/Header/Header'
 import Sidebar from './Components/Siderbar/Sidebar';
 // import Layout from './Components/Layouts/Layout';
 import SignIn1 from './Components/Authentication/Simple/SignIn1';
@@ -18,8 +18,8 @@ function App() {
   return (
   <>
 
-       <Header />
             <Sidebar />
+       {/* <Header /> */}
             {/* <Layout/> */}
          
       

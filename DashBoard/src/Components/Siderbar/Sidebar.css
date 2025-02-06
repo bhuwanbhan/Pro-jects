@@ -1,3 +1,14 @@
+ul{
+    position: fixed;
+    width:230px;
+    height: 100%;
+    border: 1px solid;
+    background-color: white;
+    top: 0;
+}
+
 li{
+    padding:5px 10px;
     list-style: none;
+    font-size: 16px;
 }
