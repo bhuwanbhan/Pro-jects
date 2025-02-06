@@ -1,8 +1,12 @@
 import React from 'react'
 import "./Sidebar.css"
-import { faBarChart, faBarcode, faBookmark, faCalendarMinus, faCalendarTimes, faCartShopping, faFileImage, faFolder, faKey, faLock, faLockOpen, faMailBulk, faMapLocation, faMessage, faNetworkWired, faPhoneAlt, faPieChart, faProjectDiagram, faUnlock } from '@fortawesome/free-solid-svg-icons';
+import { faBarChart, faBookmark, faCalendarMinus, faCartShopping, faFileImage, faFolder, faKey, faLock, faMailBulk, faMapLocation, faMessage, faNetworkWired, faPhoneAlt, faPieChart, faProjectDiagram, faUnlock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fontGrid } from '@mui/material/styles/cssUtils';
+import { Link } from 'react-router-dom';
+
+
+
+
 function Sidebar() {
   const parent=[
     {title:"Home", path:"/home", icon: <FontAwesomeIcon icon={faPieChart}/>},
@@ -26,10 +30,13 @@ function Sidebar() {
     <>
     <ul>
     {parent.map((item,index)=>(
-      <li key={index}>
+        <Link to={item.path}>
+      <li>
         <span id="icon">{item.icon}</span> <span id="title">{item.title}</span>
       </li>
-))}</ul>
+        </Link>
+))}
+</ul>
     </>
   )
 }

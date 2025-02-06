@@ -16,7 +16,7 @@ li{
     color: rgb(106, 106, 106);
     margin-top:10px;
     margin-bottom:20px;
-    transition: 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 li:hover {

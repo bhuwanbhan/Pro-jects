@@ -11,25 +11,23 @@ import SignUp2 from './Components/Authentication/Simple/SignUp2';
 import Forget from './Components/Authentication/Simple/Forget';
 import ResetPassword from './Components/Authentication/Simple/ResetPassword';
 import Footer from './Components/Footer/Footer';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
  
 function App() {
   return (
   <>
-
+  <Router>
             <Sidebar />
-       {/* <Header /> */}
-            {/* <Layout/> */}
-         
-      
-           <Main />
-          <SignIn1 />
-        <SignUp2 />
-         <Forget />
-         <ResetPassword />
+            <Routes>
+              <Route path='/home'element={<Main/>} />
+              <Route path='/sign-in'element={<SignIn1/>} />
+              <Route path='/sign-up'element={<SignUp2/>} />
+              <Route path='/forget'element={<Forget/>} />
+         </Routes>
          <Footer />
-         
+         </Router>
     </>  
      
     
