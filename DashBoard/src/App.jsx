@@ -16,16 +16,25 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
  
 function App() {
+
+  const Routers = [
+    { path: "/home",element:<Main/> },
+    { path: "/sign-in",element:<SignIn1/> },
+    { path: "/sign-up",element:<SignUp2/> },
+    { path: "/forget",element:<Forget/> },
+    { path: "/crm",element:<ResetPassword/> },
+  ]
+
   return (
   <>
   <Router>
             <Sidebar />
-            <Routes>
-              <Route path='/home' element={<Main/>} />
-              <Route path='/sign-in' element={<SignIn1 />} />
-              <Route path='/sign-up' element={<SignUp2 />} />
-              <Route path='/forget' element={<Forget />} />
+            {Routers.map((item,index)=>(
+
+              <Routes>
+              <Route key={index} path={item.path} element={item.element} />
          </Routes>
+            ))}
          <Footer />
          </Router>
     </>  

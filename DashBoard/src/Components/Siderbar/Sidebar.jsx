@@ -22,15 +22,15 @@ function Sidebar() {
     {title:"Galary", path:"/galary", icon: <FontAwesomeIcon icon={faFileImage}/>},
     {title:"File Manager", path:"/file-manager", icon: <FontAwesomeIcon icon={faFolder}/>},
     {title:"Calinder", path:"/Calinder", icon: <FontAwesomeIcon icon={faCalendarMinus}/>},
-    {title:"Sing-in", path:"/sing-in", icon: <FontAwesomeIcon icon={faUnlock}/>},
-    {title:"Sing-up", path:"/sing-up", icon: <FontAwesomeIcon icon={faLock}/>},
+    {title:"Sign-in", path:"/sign-in", icon: <FontAwesomeIcon icon={faUnlock}/>},
+    {title:"Sign-up", path:"/sign-up", icon: <FontAwesomeIcon icon={faLock}/>},
     {title:"Forget", path:"/forget", icon: <FontAwesomeIcon icon={faKey}/>},
   ]
   return (
     <>
     <ul>
     {parent.map((item,index)=>(
-        <Link to={item.path}>
+        <Link key={index} to={item.path}>
       <li>
         <span id="icon">{item.icon}</span> <span id="title">{item.title}</span>
       </li>
