@@ -13,6 +13,7 @@ import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Auth from './Components/Authentication/Auth';
 // import Api from './Components/Api/Api';
 // import Fetch from './Components/Api/fetch';
 
