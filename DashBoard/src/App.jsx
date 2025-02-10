@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import Main from './Components/MainDash/Main';
@@ -20,11 +18,12 @@ const ProtectedRoute = ({ element }) => {
 
 function App() {
   const { getToken } = AuthUser();
-  const isAuthenticated = !!getToken(); // Convert to boolean
+  const isAuthenticated = !!getToken(); // Check if user is authenticated
 
   return (
     <Router>
-      {isAuthenticated && <Sidebar />} {/* Sidebar only if authenticated */}
+      {/* Only show Sidebar if authenticated */}
+      {isAuthenticated && <Sidebar />}
 
       <Routes>
         {/* Public Routes */}
@@ -36,7 +35,7 @@ function App() {
         <Route path="/" element={<ProtectedRoute element={<Main />} />} />
         <Route path="/crm" element={<ProtectedRoute element={<ResetPassword />} />} />
 
-        {/* Catch-all route (optional) */}
+        {/* Catch-all Route */}
         <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/sign-in"} replace />} />
       </Routes>
 
