@@ -1,41 +1,20 @@
 import React, { useEffect, useState, useHistory } from 'react'
+import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 function SignIn1() {
-const[email, setEmail] = useState('')
-const[password, setPassword] = useState('')
 
-// const history = useHistory();
-useEffect(()=>{
-  if(localStorage.getItem('user-info')){
-    history.push("/add")
-  }
+
   
-},[])
-
-async function SignIn1(){
-  console.warn(email, password);
-  let items =  {email, password}
- let result = await fetch("https://api.freeapi.app/api/v1/public/randomjokes?limit=10&query=science&inc=categories%252Cid%252Ccontent&page=1",{
-  method: "POST",
-headers: {
-"Content-Type":"application/json",
-"Accept":"application/json"
-},
-
-
-body:JSON.stringify(items)
-
-
-
- })
-
- result = await result.JSON();
- localStorage.setItem( "user-info",JSON.stringify(result))
- history.pushState("/add")
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    const submitForm = () =>{
      
-      
+      http.post('/',{email:email,password:password}).then((res)=>{
+          setToken(res.data.user,res.data.access_token);
+      })
     }
-
 
 
   return (
@@ -103,7 +82,7 @@ body:JSON.stringify(items)
           </div>
         </div>
 
-        <button className="bg-sky-500 w-100 h-9 rounded"onClick={SignIn1} >Sign In </button>
+        <button className="bg-sky-500 w-100 h-9 rounded" onClick={submitForm} >Sign In </button>
       </div>
     </div>
 

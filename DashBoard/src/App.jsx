@@ -1,50 +1,47 @@
 
 
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-import Main from './Components/MainDash/Main'
-// import Header from './Components/Header/Header'
+import Main from './Components/MainDash/Main';
 import Sidebar from './Components/Siderbar/Sidebar';
-// import Layout from './Components/Layouts/Layout';
 import SignIn1 from './Components/Authentication/SignIn1';
 import SignUp2 from './Components/Authentication/SignUp2';
 import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Auth from './Components/Authentication/Auth';
-// import Api from './Components/Api/Api';
-// import Fetch from './Components/Api/fetch';
 
+import AuthUser from './Components/Authentication/AuthUser';
 
- 
+// Protected Route Component
+const ProtectedRoute = ({ element }) => {
+  const { getToken } = AuthUser();
+  return getToken() ? element : <Navigate to="/sign-in" replace />;
+};
 
 function App() {
-  const isAuthenticated = !!localStorage.getItem("token"); // Example authentication check
+  const { getToken } = AuthUser();
+  const isAuthenticated = !!getToken(); // Convert to boolean
 
   return (
+    <Router>
+      {isAuthenticated && <Sidebar />} {/* Sidebar only if authenticated */}
 
-    <>
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/sign-in" element={<SignIn1 />} />
-          <Route path="/sign-up" element={<SignUp2 />} />
-          <Route path="/forget" element={<Forget />} />
-            .
-          {/* Protected Routes */}
-          <Route element={<Auth isAuthenticated={isAuthenticated} />}>
-            <Route path="/" element={<Main />} />
-            <Route path="/crm" element={<ResetPassword />} />
-          </Route>
-        </Routes>
-        <Footer />
-      </Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/sign-in" element={<SignIn1 />} />
+        <Route path="/sign-up" element={<SignUp2 />} />
+        <Route path="/forget" element={<Forget />} />
 
-  
+        {/* Protected Routes */}
+        <Route path="/" element={<ProtectedRoute element={<Main />} />} />
+        <Route path="/crm" element={<ProtectedRoute element={<ResetPassword />} />} />
 
-    </>
+        {/* Catch-all route (optional) */}
+        <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/sign-in"} replace />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   );
 }
 
