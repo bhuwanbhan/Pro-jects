@@ -12,6 +12,7 @@ import ResetPassword from './Components/Authentication/ResetPassword';
 import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import Auth from "./Components/Authentication/Auth";
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -25,30 +26,40 @@ import Auth from "./Components/Authentication/Auth";
 function App() {
   // const isAuthenticated = !!localStorage.getItem("token"); // Example authentication check
 
+
+  
+
   return (
 
+
     <>
+    <ToastContainer theme='colored' position='top-center'></ToastContainer>
       <Router>
       <nav>
       <Link to="/">Layout</Link>
      <Link to="/signIn1">SignIn1</Link>
-\
+
 </nav>
         <Sidebar />
-        <Routes>
+        <SignIn1/>
+           <Routes>
     
     
                 {/* <Route path="sign-up" element={<SignUp2 />} /> */}
                 <Route path="forget" element={<Forget />} />
-          <Route path="/" element={<Main />}/>
+         
+          <Route path="/Layout" element={<Layout />} />
+          <Route path="/sign-in" element={<SignIn1 />} />
+          
+        
           
          
        
           {/* Protected Routes */}
           {/* <Route element={<Auth isAuthenticated={isAuthenticated} />}> */}
-          <Route path="/Sign-in" element={<SignIn1/>}/>
+         
             <Route path="/crm" element={<ResetPassword />} />
-            <Route path="/Layout" element={<Layout />} />
+            <Route path="/" element={<Main />}/>
             
             {/* </Route> */}
         

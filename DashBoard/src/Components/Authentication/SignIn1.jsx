@@ -2,25 +2,39 @@ import React, { useEffect, useState, useHistory } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import AuthUser from './AuthUser';
+import { toast } from "react-toastify";
+
+
 
 function SignIn1() {
 
-   const {http,setToken} = AuthUser();
+  const {http,setToken} = AuthUser();
   const [email,setEmail] = useState();
   const [password,setPassword] = useState();
 
     const submitForm = () =>{
-     
+    
+
       http.post('',{email:email,password:password})
       .then((res)=>{
 
           setToken(res.data.data.user_role,res.data.data.access_token
           );
+        
       })
-    }
 
+      if(email=='' || email== null || password == '' || email == '' ){
+        alert("please enter the cre")
+      
+      }
+      
+}
+    
+    
 
-  return (
+// toast("please enter the creditials");
+  
+     return (
     <div className="bg-gray-800  h-screen">
     <div className=" mt-4 flex   items-center justify-center ">
       {/* <div className=' w-12'>
@@ -61,7 +75,7 @@ function SignIn1() {
               type="email"
               onChange={(e) =>{setEmail(e.target.value)}}
               placeholder="name @example.com"
-              className="h-10 px-30  read-only:
+              className="h-10 px-30  
                bg-slate-300 rounded "
             />
           </div>
