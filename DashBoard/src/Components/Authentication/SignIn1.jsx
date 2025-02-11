@@ -21,18 +21,25 @@ function SignIn1() {
         
       })
 
-      if(email=='' || email== null || password == '' || email == '' ){
-        alert("please enter the cre")
-      
-      }
-      
-}
-    
-    
+      if(email=='' || email== null){
+        toast("please enter the email");
+      } 
 
-// toast("please enter the creditials");
+     else if(password=='' || password== null){
+        toast("please enter the password");
+      } 
+
+      else{
+        (password !== "" || password !== null || email !== "" || email !== null)
+      }
+
+
+
+      
+    }
   
-     return (
+      
+return (
     <div className="bg-gray-800  h-screen">
     <div className=" mt-4 flex   items-center justify-center ">
       {/* <div className=' w-12'>
