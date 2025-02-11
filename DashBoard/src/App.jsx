@@ -17,14 +17,12 @@ import { ToastContainer } from 'react-toastify';
 
 
 
-// import Api from './Components/Api/Api';
-// import Fetch from './Components/Api/fetch';
 
 
  
 
 function App() {
-  // const isAuthenticated = !!localStorage.getItem("token"); // Example authentication check
+ 
 
 
   
@@ -45,7 +43,7 @@ function App() {
            <Routes>
     
     
-                {/* <Route path="sign-up" element={<SignUp2 />} /> */}
+                
                 <Route path="forget" element={<Forget />} />
          
           <Route path="/Layout" element={<Layout />} />
@@ -55,8 +53,7 @@ function App() {
           
          
        
-          {/* Protected Routes */}
-          {/* <Route element={<Auth isAuthenticated={isAuthenticated} />}> */}
+        
          
             <Route path="/crm" element={<ResetPassword />} />
             <Route path="/" element={<Main />}/>
