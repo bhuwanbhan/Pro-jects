@@ -11,8 +11,6 @@ function Main() {
 
 
   return (
-    
-
     <div>
 <Layout/>;
 

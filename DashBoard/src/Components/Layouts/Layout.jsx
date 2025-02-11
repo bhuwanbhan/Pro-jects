@@ -6,11 +6,9 @@ import { LineChart } from '@mui/x-charts/LineChart';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { PieChart } from '@mui/x-charts/PieChart';
 
-
-
-
 function Layout() {
- const dataset = [
+  
+const dataset = [
     { x: 1, y: 2 },
     { x: 2, y: 5.5 },
     { x: 3, y: 2 },
@@ -32,6 +30,7 @@ function Layout() {
   return (
 
     <>
+          
 
     <div className='ms-80 mt-8'>
     <div className=' h-screen items-center justify-center  text-4xl font-bold'>Ecommerce Dashboard

@@ -1,18 +1,21 @@
 import React, { useEffect, useState, useHistory } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import AuthUser from './AuthUser';
 
 function SignIn1() {
 
+   const {http,setToken} = AuthUser();
+  const [email,setEmail] = useState();
+  const [password,setPassword] = useState();
 
-  
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    
     const submitForm = () =>{
      
-      http.post('/',{email:email,password:password}).then((res)=>{
-          setToken(res.data.user,res.data.access_token);
+      http.post('',{email:email,password:password})
+      .then((res)=>{
+
+          setToken(res.data.data.user_role,res.data.data.access_token
+          );
       })
     }
 
@@ -68,8 +71,7 @@ function SignIn1() {
             <input
               type="password"
               onChange={(e)=>{
-                setPassword(e.target.value)
-              }}
+                setPassword(e.target.value)}}
               placeholder="Password"
               className="h-10 px-30
                bg-slate-300 rounded "
@@ -91,10 +93,7 @@ function SignIn1() {
     </div>
  
   </div>
-
-
-
-  )
+)
 }
 
 export default SignIn1

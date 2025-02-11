@@ -1,7 +1,11 @@
-import { Navigate, Outlet } from "react-router-dom";
+import React from 'react'
 
-const Auth = ({ isAuthenticated }) => {
-  return isAuthenticated ? <Outlet /> : <Navigate to="/sign-in" />;
-};
+function Auth() {
+  return (
+    <div>
+      <h1></h1>
+    </div>
+  )
+}
 
-export default Auth;
+export default Auth
