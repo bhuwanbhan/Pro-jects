@@ -1,6 +1,5 @@
-import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function AuthUser(){
     const navigate = useNavigate();
