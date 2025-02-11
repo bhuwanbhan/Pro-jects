@@ -10,17 +10,23 @@ import SignUp2 from './Components/Authentication/SignUp2';
 import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import {BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
+
+import Auth from "./Components/Authentication/Auth";
+import { ToastContainer } from 'react-toastify';
+
 function App() {
+ return (
+<>
 
-  return (
 
-
-    <>
     <ToastContainer theme='colored' position='top-center'></ToastContainer>
       <Router>
       <nav>
       <Link to="/">Layout</Link>
+
+
     <Link to="/signIn1">SignIn1</Link>
+
 
 </nav>
         <Sidebar />
@@ -29,7 +35,12 @@ function App() {
     
     
                 
-                <Route path="forget" element={<Forget />} />
+
+          <Route path="forget" element={<Forget />} />
+         
+
+            
+
           <Route path="/Layout" element={<Layout />} />
           <Route path="/sign-in" element={<SignIn1 />} />
           <Route path="/crm" element={<ResetPassword />} />
