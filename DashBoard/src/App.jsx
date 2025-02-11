@@ -27,6 +27,7 @@ function App() {
           <Route path="/sign-in" element={<SignIn1 />} />
           <Route path="/crm" element={<ResetPassword />} />
           <Route path="/" element={<Main />}/>
+          yo
         </Routes>
       </Router>
     </>
