@@ -2,14 +2,12 @@
 // import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import Main from './Components/MainDash/Main'
-import Header from './Components/Header/Header'
 import Sidebar from './Components/Siderbar/Sidebar';
  import Layout from './Components/Layouts/Layout';
 import SignIn1 from './Components/Authentication/SignIn1';
 import SignUp2 from './Components/Authentication/SignUp2';
 import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
-import Footer from './Components/Footer/Footer';
 import {BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import Auth from "./Components/Authentication/Auth";
 import { ToastContainer } from 'react-toastify';
@@ -41,8 +39,9 @@ function App() {
 
 </nav>
         <Sidebar />
-        <SignIn1/>
-           <Routes>
+     <SignIn1/>
+    <Routes>
+
     
     
                 {/* <Route path="sign-up" element={<SignUp2 />} /> */}
@@ -57,9 +56,11 @@ function App() {
        
           {/* Protected Routes */}
           {/* <Route element={<Auth isAuthenticated={isAuthenticated} />}> */}
+
          
             <Route path="/crm" element={<ResetPassword />} />
             <Route path="/" element={<Main />}/>
+
             
             {/* </Route> */}
         
