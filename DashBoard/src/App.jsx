@@ -47,12 +47,7 @@ function App() {
                 <Route path="forget" element={<Forget />} />
          
           <Route path="/Layout" element={<Layout />} />
-          <Route path="/sign-in" element={<SignIn1 />} />
-          
-        
-          
-         
-       
+          <Route path="/sign-in" element={<SignIn1 />}
           {/* Protected Routes */}
           {/* <Route element={<Auth isAuthenticated={isAuthenticated} />}> */}
          
