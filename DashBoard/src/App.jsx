@@ -19,6 +19,7 @@ function App() {
     <Link to="/signIn1">SignIn1</Link>
 
 </nav>
+,
         <Sidebar />
         <SignIn1/>
           <Routes>
