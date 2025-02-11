@@ -23,22 +23,19 @@ function SignIn1() {
         
       })
 
-      if(email=='' || email== null){
-        toast("please enter the email");
-      } 
+    }
 
-     else if(password=='' || password== null){
-        toast("please enter the password");
-      } 
+    //   if(email=='' || email== null){
+    //     toast("please enter the email");
+    //   } 
 
-      else{
-        (password !== "" || password !== null || email !== "" || email !== null)
-      }
-
-
+    //  else if(password=='' || password== null){
+    //     toast("please enter the password");
+    //   } 
 
       
-    }
+
+  
   
       
 return (
