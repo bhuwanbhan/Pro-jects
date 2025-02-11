@@ -1,57 +1,54 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-export default function AuthUser() {
+export default function AuthUser(){
     const navigate = useNavigate();
 
-    // Retrieve token from session storage
-    const getToken = () => {
+    const getToken = () =>{
         const tokenString = sessionStorage.getItem('token');
-        return tokenString ? JSON.parse(tokenString) : null;
-    };
+        const userToken = JSON.parse(tokenString);
+        return userToken;
+    }
 
-    // Retrieve user from session storage
-    const getUser = () => {
+    const getUser = () =>{
         const userString = sessionStorage.getItem('user');
-        return userString ? JSON.parse(userString) : null;
-    };
+        const user_detail = JSON.parse(userString);
+        return user_detail;
+    }
 
-    const [token, setToken] = useState(getToken());
-    const [user, setUser] = useState(getUser());
 
-    // Save token and user to session storage
-    const saveToken = (user, token) => {
-        sessionStorage.setItem('token', JSON.stringify(token));
-        sessionStorage.setItem('user', JSON.stringify(user));
+
+    const [token,setToken] = useState(getToken());
+    const [user,setUser] = useState(getUser());
+
+    const saveToken = (user,token) =>{
+        sessionStorage.setItem('token',JSON.stringify(token));
+        sessionStorage.setItem('user',JSON.stringify(user));
 
         setToken(token);
         setUser(user);
-        navigate('/'); // Redirect to home page after login
-    };
+        navigate('/Layout');
+    }
 
-    // Logout function
     const logout = () => {
         sessionStorage.clear();
-        setToken(null);
-        setUser(null);
-        navigate('/'); // Redirect to home page after logout
-    };
+    
+    }
 
-    // Create an Axios instance with dynamic authorization header
     const http = axios.create({
-        baseURL: "http://10.10.10.111:8282/api/v1", // Updated base URL
-        headers: {
-            "Content-Type": "application/json",
-            ...(token ? { "Authorization": `Bearer ${token}` } : {}) // Include Authorization only if token exists
+        baseURL:"http://10.10.10.151:8282/api/v1/auth/sign-in",
+        headers:
+        {
+            "Content-type" : "application/json",
+            "Authorization" : `Bearer ${token}`
         }
     });
-
     return {
-        setToken: saveToken,
+        setToken:saveToken,
         token,
         user,
-        logout,
-        http
-    };
+        getToken,
+        http,
+    }
 }
