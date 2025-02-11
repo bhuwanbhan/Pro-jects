@@ -9,6 +9,8 @@ import SignUp2 from './Components/Authentication/SignUp2';
 import Forget from './Components/Authentication/Forget';
 import ResetPassword from './Components/Authentication/ResetPassword';
 import {BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
+import Auth from "./Components/Authentication/Auth";
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -22,36 +24,43 @@ import {BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 function App() {
   // const isAuthenticated = !!localStorage.getItem("token"); // Example authentication check
 
+
+  
+
   return (
 
+
     <>
+    <ToastContainer theme='colored' position='top-center'></ToastContainer>
       <Router>
       <nav>
       <Link to="/">Layout</Link>
      <Link to="/signIn1">SignIn1</Link>
-\
+
 </nav>
         <Sidebar />
-        <Routes>
-          <Route path="/sign-in" element={<SignIn1 />} />
-          <Route path="/sign-up" element={<SignUp2 />} />
-          <Route path="/forget" element={<Forget />} />
-          {/* Protected Routes */}
-            <Route path="/" element={<Main />} />
+     <SignIn1/>
+    <Routes>
 
     
     
                 {/* <Route path="sign-up" element={<SignUp2 />} /> */}
                 <Route path="forget" element={<Forget />} />
-          <Route path="/" element={<Main />}/>
+         
+          <Route path="/Layout" element={<Layout />} />
+          <Route path="/sign-in" element={<SignIn1 />} />
+          
+        
           
          
        
           {/* Protected Routes */}
           {/* <Route element={<Auth isAuthenticated={isAuthenticated} />}> */}
-          <Route path="/Sign-in" element={<SignIn1/>}/>
-           <Route path="/crm" element={<ResetPassword />} />
-            <Route path="/Layout" element={<Layout />} />
+
+         
+            <Route path="/crm" element={<ResetPassword />} />
+            <Route path="/" element={<Main />}/>
+
             
             {/* </Route> */}
         
