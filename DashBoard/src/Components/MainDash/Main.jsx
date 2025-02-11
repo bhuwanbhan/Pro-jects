@@ -3,14 +3,16 @@ import { faEllipsis, faPause,  faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Main.css';
 import { BarChart } from '@mui/x-charts/BarChart';
+import React from "react"
+
 
 
 function Main() {
-  return (
-    
 
+
+  return (
     <div>
-<Layout/>
+<Layout/>;
 
 
 
@@ -151,7 +153,7 @@ function Main() {
 
 </div>
 
-<div className="bg-gray-100 w-2/3">
+<div className="bg-gray-100 ">
 <p className=" bg-white">1 to 6 Items of 15</p>
 {/* <div className=" text-2xl bg-slate-200 h-20 border-b-1 "> */}
   <h6 className="ms-75 text-2xl font-bold">Top regions by revenue</h6>
@@ -197,41 +199,27 @@ function Main() {
   
   </div>
 
-  <div className="mt-5">
+  <p className="border-y-1"></p>
+    <div className="mt-5  ">
    
   <BarChart
       series={[
-        { data: [35, 44, 24, 34] },
-        { data: [51, 6, 49, 30] },
-        { data: [15, 25, 30, 50] },
-        { data: [60, 50, 15, 25] },
+        { data: [35, 44, 24, 34]},
+        { data: [51, 6, 49, 30]},
+        { data: [15, 25, 30, 50]},
+        { data: [60, 50, 15, 25]},
       ]}
       height={290}
       xAxis={[{ data: ['Q1', 'Q2', 'Q3', 'Q4'], scaleType: 'band' }]}
       margin={{ top: 10, bottom: 30, left: 10, right: 10 }}
     />
     </div>
-  {/* <div className="mt-5">
-   
-  <BarChart
-      series={[
-        { data: [35, 44, 24, 34] },
-        { data: [51, 6, 49, 30] },
-        { data: [15, 25, 30, 50] },
-        { data: [60, 50, 15, 25] },
-      ]}
-      height={290}
-      xAxis={[{ data: ['Q1', 'Q2', 'Q3', 'Q4'], scaleType: 'band' }]}
-      margin={{ top: 10, bottom: 30, left: 40, right: 10 }}
-    />
-    </div> */}
+<div>
+</div>
     </div>
-
-</div>
-</div>
-
-
-   );
+    </div>
+    </div>
+ );
 }
 
 export default Main;
